@@ -202,7 +202,7 @@ def _relativize_and_symlink_file_in_coursier_cache(repository_ctx, absolute_path
     ).replace("//", "/")
     absolute_path_parts = absolute_path.split(coursier_cache_path)
     if len(absolute_path_parts) != 2:
-        fail("Error while trying to parse the path of file in the coursier_cache_path: " + coursier_cache_path + " absolute_path: " + absolute_path + " parts: " + absolute_path_parts)
+        fail("Error while trying to parse the path of file in the coursier_cache_path: " + coursier_cache_path + " absolute_path: " + absolute_path)
     else:
         relative_path = absolute_path_parts[1]
 
